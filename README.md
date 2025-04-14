@@ -5,7 +5,7 @@ This project uses a real estate dataset to build a multiple linear regression (M
 - **Carpet Area** (in square feet)
 - **Distance from Nearest Metro Station** (in kilometers)
 - **Number of Schools Within 2 km** of the house
-- *(Any additional identifier column if available)*
+
 
 ---
 
@@ -53,12 +53,58 @@ This project uses a real estate dataset to build a multiple linear regression (M
   - Additional packages for EDA and statistical tests if required
 
 - The project is fully reproducible using a provided Conda environment with an `environment.yml` file.
+---
+## 📊 Analysis Process & Interpretations
+
+| **Step**                         | **Description**                                      | **Key Metrics/Visuals**                  | **Interpretation Notes**                                      |
+|----------------------------------|------------------------------------------------------|-------------------------------------------|----------------------------------------------------------------|
+| **1. Data Check**                | Import data and examine structure                    | `.info()`, `.head()`                      | Ensure correct data types and no missing values                |
+| **2. Data Split**                | Train-test split (80/20)                             | `train_test_split()`                      | Prevent data leakage, ensure fair model evaluation             |
+| **3. Model Building**            | Fit MLR model using training set                     | `.summary()` (statsmodels)                | Review model fit and statistical output                        |
+| **4. Coefficient Analysis**      | Identify significant variables                       | p-values < 0.05                           | Only significant variables should be interpreted               |
+| **5. Model Fit**                 | Evaluate R² and Adjusted R²                          | R², Adj R²                                | How much variance in selling price is explained                |
+| **6. Multicollinearity**         | Check with VIF                                       | `variance_inflation_factor()`             | VIF > 5–10 suggests strong multicollinearity                   |
+| **7. Influential Observations**  | Identify outliers affecting model                    | Leverage plots, Cook’s Distance           | Influential points may distort regression                     |
+| **8. Normality of Errors**       | Check distribution of residuals                      | Q-Q Plot, Shapiro-Wilk test               | Model assumes residuals are normally distributed               |
+| **9. Heteroscedasticity**        | Test variance of residuals across predictors         | Residual vs. fitted/predictor plots       | Look for "funnel" shape; should ideally be constant            |
+| **10. RMSE Calculation**         | Calculate error on both Train and Test sets          | RMSE (scikit-learn)                       | Lower RMSE → better model accuracy and generalization          |
+
+---
+## 🤝 Collaboration & Contributions
+
+Contributions are Welcome!
+
+If you'd like to suggest changes, improve code, or add new features:
+
+1. Fork the repository
+2. Create a new branch (`feature/my-new-feature`)
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+For significant changes, please open an issue first to discuss what you'd like to change.
+
+Let's collaborate and grow together 🚀
+
+---
+## 📜 License
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute it with attribution.
+
+---
+## 👤 Author
+
+**William Chenecho Phiri**  
+📧 [chenechoz@gmail.com](mailto:chenechoz@gmail.com)  
+🌐 [GitHub Profile](https://github.com/kochezz) 
 
 ---
 
 ## 🗂️ Project Structure
 
 ```plaintext
+
 HousePricePrediction/
 ├── data/
 │   ├── raw/                # Original house price data file
@@ -76,4 +122,16 @@ HousePricePrediction/
 ├── README.md               # Project overview and instructions
 └── main.py                 # Main script to run the model (optional)
 
+## 🚀 How to Run the Project
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/FPM_Assignment_PY.git
+   cd FPM_Assignment_PY
+
+conda env create -f environment/environment.yml
+conda activate ds-env
+
+---
 
