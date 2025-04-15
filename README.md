@@ -101,37 +101,5 @@ You are free to use, modify, and distribute it with attribution.
 
 ---
 
-## 🗂️ Project Structure
-
-```plaintext
-
-HousePricePrediction/
-├── data/
-│   ├── raw/                # Original house price data file
-│   └── processed/          # Cleaned and processed datasets
-├── notebooks/              # Jupyter notebooks for EDA and modeling
-├── src/                    # Source scripts for data cleaning, model training, and utilities
-│   ├── data_prep.py        # Data preprocessing functions
-│   ├── train_model.py      # Script to train the regression model
-│   └── utils.py            # Helper functions
-├── models/                 # Saved model objects (e.g., pickle files)
-├── reports/                # Generated reports and figures (e.g., residual plots)
-├── environment/            # Environment configuration files
-│   ├── environment.yml     # Conda environment file
-│   └── requirements.txt    # pip requirements file (if needed)
-├── README.md               # Project overview and instructions
-└── main.py                 # Main script to run the model (optional)
-
-## 🚀 How to Run the Project
-
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/your-username/FPM_Assignment_PY.git
-   cd FPM_Assignment_PY
-
-conda env create -f environment/environment.yml
-conda activate ds-env
-
 ---
 
