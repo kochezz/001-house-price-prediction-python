@@ -98,6 +98,8 @@ You are free to use, modify, and distribute it with attribution.
 **William Chenecho Phiri**  
 📧 [chenechoz@gmail.com](mailto:chenechoz@gmail.com)  
 🌐 [GitHub Profile](https://github.com/kochezz) 
+🌐 [Linkedin Profile](https://www.linkedin.com/in/william-phiri-866b8443/) 
+
 
 ---
 
