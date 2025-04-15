@@ -1,0 +1,5 @@
+📊 Model Performance Summary
+Train RMSE: 2.192
+Test RMSE: 2.231
+R-squared (Adj): 0.804
+Model complete and ready for deployment.
