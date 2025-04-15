@@ -1,4 +1,4 @@
-# 🏠 House Price Prediction Assignment
+# 🏠 House Price Prediction Case Study
 
 This project uses a real estate dataset to build a multiple linear regression (MLR) model that predicts the selling price of houses (in million Rs) based on several predictors. The data consists of 198 rows and 5 columns containing the following information:
 - **Selling Price** (in million Rs)
