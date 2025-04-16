@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+import os
 
 # Page config
 st.set_page_config(page_title="House Price Prediction", layout="centered")
@@ -15,14 +15,15 @@ st.markdown("Upload new house data and predict selling prices using the trained 
 st.sidebar.header("Upload CSV File")
 uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type=["csv"])
 
-# Load model from absolute path
+# Use relative path to load model (for Streamlit Cloud compatibility)
+MODEL_PATH = os.path.join("models", "sklearn_house_price_model.pkl")
+
+# Load model with caching
 @st.cache_resource
 def load_model():
-    return joblib.load("C:/Users/willi/GitHub/FPM_Assignment_PY/models/house_price_model.pkl")
+    return joblib.load(MODEL_PATH)
 
 model = load_model()
-formula = "price ~ area + distance + schools"
-formula_features = formula.replace("price ~", "")
 
 # Predict and display
 if uploaded_file:
@@ -31,7 +32,7 @@ if uploaded_file:
         st.write("📋 Preview of uploaded data:")
         st.dataframe(new_data.head())
 
-        # Create feature matrix
+        # Prepare input features for sklearn model
         X_new = new_data[["area", "distance", "schools"]]
 
         # Predict prices
