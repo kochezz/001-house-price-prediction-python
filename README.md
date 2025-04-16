@@ -85,7 +85,54 @@ If you'd like to suggest changes, improve code, or add new features:
 For significant changes, please open an issue first to discuss what you'd like to change.
 
 Let's collaborate and grow together 🚀
+---
 
+## 🗂️ Project Structure
+
+```plaintext
+FPM_Assignment_PY/
+│
+├── dashboard/
+│   └── app.py                          # ✅ Streamlit app
+│
+├── data/
+│   ├── raw/
+│   │   └── House Price Data.csv
+│   ├── processed/
+│   │   ├── cleaned_house_data.csv
+│   │   ├── X_train.csv
+│   │   ├── X_test.csv
+│   │   ├── y_train.csv
+│   │   └── y_test.csv
+│   └── new/
+│       └── incoming_house_data.csv     # ✅ For dashboard input testing
+│
+├── environment/
+│   ├── environment.yml
+│   └── requirements.txt
+│
+├── models/
+│   └── sklearn_house_price_model.pkl
+│
+├── notebooks/
+│   ├── 01_EDA.ipynb
+│   ├── 02_Model_Building.ipynb
+│   └── 03_Evaluation_Report.ipynb
+│
+├── reports/
+│   ├── summary.txt
+│   └── 03_Evaluation_Report.pdf
+│
+├── src/
+│   ├── data_prep.py
+│   ├── train_model.py
+│   └── utils.py
+│
+├── .gitignore
+├── main.py
+└── README.md
+
+```
 ---
 ## 📜 License
 
