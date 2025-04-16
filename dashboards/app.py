@@ -16,7 +16,7 @@ st.sidebar.header("Upload CSV File")
 uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type=["csv"])
 
 # Use relative path to load model (for Streamlit Cloud compatibility)
-MODEL_PATH = os.path.join("models", "sklearn_house_price_model.pkl")
+MODEL_PATH = os.path.join("models", "house_price_model.pkl")
 
 # Load model with caching
 @st.cache_resource
