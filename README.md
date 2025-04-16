@@ -1,4 +1,4 @@
-# 🏠 House Price Prediction Assignment
+# 🏠 House Price Prediction Case Study
 
 This project uses a real estate dataset to build a multiple linear regression (MLR) model that predicts the selling price of houses (in million Rs) based on several predictors. The data consists of 198 rows and 5 columns containing the following information:
 - **Selling Price** (in million Rs)
@@ -85,7 +85,54 @@ If you'd like to suggest changes, improve code, or add new features:
 For significant changes, please open an issue first to discuss what you'd like to change.
 
 Let's collaborate and grow together 🚀
+---
 
+## 🗂️ Project Structure
+
+```plaintext
+FPM_Assignment_PY/
+│
+├── dashboard/
+│   └── app.py                          # ✅ Streamlit app
+│
+├── data/
+│   ├── raw/
+│   │   └── House Price Data.csv
+│   ├── processed/
+│   │   ├── cleaned_house_data.csv
+│   │   ├── X_train.csv
+│   │   ├── X_test.csv
+│   │   ├── y_train.csv
+│   │   └── y_test.csv
+│   └── new/
+│       └── incoming_house_data.csv     # ✅ For dashboard input testing
+│
+├── environment/
+│   ├── environment.yml
+│   └── requirements.txt
+│
+├── models/
+│   └── sklearn_house_price_model.pkl
+│
+├── notebooks/
+│   ├── 01_EDA.ipynb
+│   ├── 02_Model_Building.ipynb
+│   └── 03_Evaluation_Report.ipynb
+│
+├── reports/
+│   ├── summary.txt
+│   └── 03_Evaluation_Report.pdf
+│
+├── src/
+│   ├── data_prep.py
+│   ├── train_model.py
+│   └── utils.py
+│
+├── .gitignore
+├── main.py
+└── README.md
+
+```
 ---
 ## 📜 License
 
@@ -98,40 +145,8 @@ You are free to use, modify, and distribute it with attribution.
 **William Chenecho Phiri**  
 📧 [chenechoz@gmail.com](mailto:chenechoz@gmail.com)  
 🌐 [GitHub Profile](https://github.com/kochezz) 
+🌐 [Linkedin Profile](https://www.linkedin.com/in/william-phiri-866b8443/) 
 
----
-
-## 🗂️ Project Structure
-
-```plaintext
-
-HousePricePrediction/
-├── data/
-│   ├── raw/                # Original house price data file
-│   └── processed/          # Cleaned and processed datasets
-├── notebooks/              # Jupyter notebooks for EDA and modeling
-├── src/                    # Source scripts for data cleaning, model training, and utilities
-│   ├── data_prep.py        # Data preprocessing functions
-│   ├── train_model.py      # Script to train the regression model
-│   └── utils.py            # Helper functions
-├── models/                 # Saved model objects (e.g., pickle files)
-├── reports/                # Generated reports and figures (e.g., residual plots)
-├── environment/            # Environment configuration files
-│   ├── environment.yml     # Conda environment file
-│   └── requirements.txt    # pip requirements file (if needed)
-├── README.md               # Project overview and instructions
-└── main.py                 # Main script to run the model (optional)
-
-## 🚀 How to Run the Project
-
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/your-username/FPM_Assignment_PY.git
-   cd FPM_Assignment_PY
-
-conda env create -f environment/environment.yml
-conda activate ds-env
 
 ---
 
