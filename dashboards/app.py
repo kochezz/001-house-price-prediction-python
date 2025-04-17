@@ -5,7 +5,7 @@ import joblib
 import os
 from PIL import Image
 
-# Set dark theme styling and page config
+# Set up page config
 st.set_page_config(
     page_title="House Price Prediction | BEDA",
     page_icon="🏠",
@@ -19,17 +19,13 @@ if os.path.exists(logo_path):
     logo = Image.open(logo_path)
     st.image(logo, width=150)
 
-# Title and tagline
+# Title and branding
 st.markdown(
     "<h1 style='color:#ffffff;'>🏠 House Price Prediction App</h1>"
     "<h4 style='color:#cccccc;'>Business Enterprise Data Architecture (BEDA)</h4>"
     "<h5 style='color:#999999;'>Get it done the BEDA way</h5><br>",
     unsafe_allow_html=True
 )
-
-# Sidebar file uploader
-st.sidebar.header("Upload CSV File")
-uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type=["csv"])
 
 # Load model
 MODEL_PATH = os.path.join("models", "house_price_model.pkl")
@@ -40,34 +36,19 @@ def load_model():
 
 model = load_model()
 
-# Main prediction workflow
-if uploaded_file:
-    try:
-        new_data = pd.read_csv(uploaded_file)
-        st.subheader("📋 Preview of Uploaded Data")
-        st.dataframe(new_data)
+# User input section
+st.subheader("🏠 Enter Property Details")
 
-        X_new = new_data[["area", "distance", "schools"]]
-        predictions = model.predict(X_new)
-        new_data["Predicted Price (million Rs)"] = predictions
+area = st.number_input("Carpet Area (sq. ft.)", min_value=200, max_value=10000, value=1200)
+distance = st.number_input("Distance to Metro Station (km)", min_value=0.0, max_value=50.0, value=2.5)
+schools = st.number_input("Number of Schools Nearby", min_value=0, max_value=20, value=3)
 
-        st.success("✅ Predictions generated successfully!")
-        st.dataframe(new_data)
+if st.button("🔍 Predict Selling Price"):
+    input_df = pd.DataFrame([[area, distance, schools]], columns=["area", "distance", "schools"])
+    prediction = model.predict(input_df)[0]
+    st.success(f"💰 Estimated Selling Price: **{prediction:.2f} million Rs**")
 
-        csv = new_data.to_csv(index=False).encode("utf-8")
-        st.download_button(
-            label="📥 Download Predictions as CSV",
-            data=csv,
-            file_name="predicted_house_prices.csv",
-            mime="text/csv"
-        )
-
-    except Exception as e:
-        st.error(f"❌ Error processing file: {e}")
-else:
-    st.info("👈 Upload a CSV file to begin prediction.")
-
-# Contact Form
+# Divider
 st.markdown("---")
 st.subheader("📬 Contact Us")
 
