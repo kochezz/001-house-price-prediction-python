@@ -112,7 +112,7 @@ FPM_Assignment_PY/
 │   └── requirements.txt
 │
 ├── models/
-│   └── sklearn_house_price_model.pkl
+│   └── house_price_model.pkl
 │
 ├── notebooks/
 │   ├── 01_EDA.ipynb
