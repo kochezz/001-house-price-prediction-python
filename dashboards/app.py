@@ -20,8 +20,8 @@ if os.path.exists(logo_path):
 # Title
 st.markdown(
     "<h1 style='color:#ffffff;'>🏠 House Price Prediction App</h1>"
-    "<h4 style='color:#cccccc;'>Business Enterprise Data Architecture (BEDA)</h4>"
-    "<h5 style='color:#999999;'>Get it done the BEDA way</h5><br>",
+    "<h4 style='color:#cccccc;'>W.Phiri's Business Enterprise Data Architecture (BEDA)</h4>"
+    "<h5 style='color:#999999;'>Pillar1-e DS FPM Assignment</h5><br>",
     unsafe_allow_html=True
 )
 
@@ -85,6 +85,6 @@ st.markdown(contact_form, unsafe_allow_html=True)
 # Footer
 st.markdown(
     "<hr style='margin-top: 50px;'>"
-    "<center><small style='color:gray;'>© 2024 Business Enterprise Data Architecture (BEDA)</small></center>",
+    "<center><small style='color:gray;'>© 2025 | William Phiri |Student No.4295158639 | Business Enterprise Data Architecture (BEDA)</small></center>",
     unsafe_allow_html=True
 )
