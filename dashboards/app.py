@@ -37,14 +37,14 @@ tab1, tab2 = st.tabs(["📄 Predict via CSV", "🔢 Predict a Single House"])
 
 with tab1:
     st.subheader("📄 Upload CSV File for Batch Prediction")
-    uploaded_file = st.file_uploader("Upload a CSV file with columns: area, distance, schools", type="csv")
+    uploaded_file = st.file_uploader("Upload a CSV file with columns: area, distance", type="csv")
     
     if uploaded_file:
         try:
             input_data = pd.read_csv(uploaded_file)
             st.dataframe(input_data)
 
-            preds = model.predict(input_data[["area", "distance", "schools"]])
+            preds = model.predict(input_data[["area", "distance"]])
             input_data["Predicted Price (million Rs)"] = preds
 
             st.success("✅ Predictions complete.")
@@ -61,10 +61,9 @@ with tab2:
 
     area = st.number_input("Carpet Area (sq ft)", min_value=100, max_value=10000, value=1200)
     distance = st.number_input("Distance to Metro (km)", min_value=0.0, max_value=100.0, value=3.0)
-    schools = st.number_input("Number of Schools Nearby", min_value=0, max_value=20, value=3)
 
     if st.button("🔍 Predict"):
-        input_df = pd.DataFrame([[area, distance, schools]], columns=["area", "distance", "schools"])
+        input_df = pd.DataFrame([[area, distance]], columns=["area", "distance"])
         pred = model.predict(input_df)[0]
         st.success(f"💰 Predicted Price: {pred:.2f} million Rs")
 
@@ -87,4 +86,3 @@ st.markdown(
     "<hr style='margin-top: 50px;'>"
     "<center><small style='color:gray;'>© 2025 | William Phiri |Student No.4295158639 | Business Enterprise Data Architecture (BEDA)</small></center>",
     unsafe_allow_html=True
-)
