@@ -86,3 +86,4 @@ st.markdown(
     "<hr style='margin-top: 50px;'>"
     "<center><small style='color:gray;'>© 2025 | William Phiri |Student No.4295158639 | Business Enterprise Data Architecture (BEDA)</small></center>",
     unsafe_allow_html=True
+)
