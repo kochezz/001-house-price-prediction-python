@@ -99,14 +99,13 @@ FPM_Assignment_PY/
 │   ├── raw/
 │   │   └── House Price Data.csv
 │   ├── processed/
-│   │   ├── cleaned_house_data.csv
+│   │   ├── hse_price_cleaned.csv
+│   │   ├── hse_price_optimized.csv
+│   │   ├── incoming_house_data.csv  # ✅ For dashboard input testing
 │   │   ├── X_train.csv
 │   │   ├── X_test.csv
 │   │   ├── y_train.csv
-│   │   └── y_test.csv
-│   └── new/
-│       └── incoming_house_data.csv     # ✅ For dashboard input testing
-│
+│   │   └── y_test.csv    
 ├── environment/
 │   ├── environment.yml
 │   └── requirements.txt
@@ -121,7 +120,7 @@ FPM_Assignment_PY/
 │
 ├── reports/
 │   ├── summary.txt
-│   └── 03_Evaluation_Report.pdf
+│   └── 03_objective_evaluation_report.pdf
 │
 ├── src/
 │   ├── data_prep.py
