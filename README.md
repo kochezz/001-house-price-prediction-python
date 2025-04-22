@@ -1,151 +1,89 @@
-# 🏠 House Price Prediction Case Study
 
-This project uses a real estate dataset to build a multiple linear regression (MLR) model that predicts the selling price of houses (in million Rs) based on several predictors. The data consists of 198 rows and 5 columns containing the following information:
-- **Selling Price** (in million Rs)
-- **Carpet Area** (in square feet)
-- **Distance from Nearest Metro Station** (in kilometers)
-- **Number of Schools Within 2 km** of the house
+# 🏡 House Price Prediction using Multiple Linear Regression (Python)
 
-
----
-
-## 📋 Objectives / Questions Addressed
-
-1. **Data Import & Structure Check**  
-   - Import the House Price data and examine its structure.
-
-2. **Data Splitting**  
-   - Split the data into Training (80%) and Testing (20%) datasets.
-
-3. **Model Building**  
-   - Build a regression model on the training data to estimate the selling price of a house.
-
-4. **Variable Significance & Interpretation**  
-   - Identify significant predictors and interpret their regression coefficients.
-
-5. **Model Fit Metrics**  
-   - Report the R² and Adjusted R² of the model along with their interpretations.
-
-6. **Multicollinearity Assessment**  
-   - Check for multicollinearity (e.g., using VIF) and perform necessary steps to address it.
-
-7. **Influential Observations**  
-   - Identify any influential observations that might disproportionately affect the model.
-
-8. **Error Normality**  
-   - Assess if the model residuals (errors) follow a normal distribution.
-
-9. **Heteroscedasticity Check**  
-   - Evaluate for heteroscedasticity by plotting residuals versus the predictors.
-
-10. **Model Performance**  
-    - Calculate the Root Mean Squared Error (RMSE) for both Training and Testing datasets.
+[![Python](https://img.shields.io/badge/Built%20With-Python-blue?logo=python)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)]()
+[![Data](https://img.shields.io/badge/Data-Cleaned-lightgrey)]()
 
 ---
 
-## 🔧 Tools & Technologies
+## 📘 Project Overview
 
-- **Python** (3.x) with key libraries:
-  - **pandas** & **numpy** for data manipulation
-  - **matplotlib** & **seaborn** for visualizations
-  - **scikit-learn** for data splitting and evaluation
-  - **statsmodels** & **patsy** for building regression models and performing diagnostics
-  - Additional packages for EDA and statistical tests if required
+This project builds a **Multiple Linear Regression** model in **Python** to predict the **selling price** of houses based on:
 
-- The project is fully reproducible using a provided Conda environment with an `environment.yml` file.
----
-## 📊 Analysis Process & Interpretations
+- Carpet area (in square feet)
+- Distance from the nearest metro station (in km)
+- Number of schools within 2 km
 
-| **Step**                         | **Description**                                      | **Key Metrics/Visuals**                  | **Interpretation Notes**                                      |
-|----------------------------------|------------------------------------------------------|-------------------------------------------|----------------------------------------------------------------|
-| **1. Data Check**                | Import data and examine structure                    | `.info()`, `.head()`                      | Ensure correct data types and no missing values                |
-| **2. Data Split**                | Train-test split (80/20)                             | `train_test_split()`                      | Prevent data leakage, ensure fair model evaluation             |
-| **3. Model Building**            | Fit MLR model using training set                     | `.summary()` (statsmodels)                | Review model fit and statistical output                        |
-| **4. Coefficient Analysis**      | Identify significant variables                       | p-values < 0.05                           | Only significant variables should be interpreted               |
-| **5. Model Fit**                 | Evaluate R² and Adjusted R²                          | R², Adj R²                                | How much variance in selling price is explained                |
-| **6. Multicollinearity**         | Check with VIF                                       | `variance_inflation_factor()`             | VIF > 5–10 suggests strong multicollinearity                   |
-| **7. Influential Observations**  | Identify outliers affecting model                    | Leverage plots, Cook’s Distance           | Influential points may distort regression                     |
-| **8. Normality of Errors**       | Check distribution of residuals                      | Q-Q Plot, Shapiro-Wilk test               | Model assumes residuals are normally distributed               |
-| **9. Heteroscedasticity**        | Test variance of residuals across predictors         | Residual vs. fitted/predictor plots       | Look for "funnel" shape; should ideally be constant            |
-| **10. RMSE Calculation**         | Calculate error on both Train and Test sets          | RMSE (scikit-learn)                       | Lower RMSE → better model accuracy and generalization          |
+The dataset contains **198 observations** and 5 variables.
 
 ---
-## 🤝 Collaboration & Contributions
 
-Contributions are Welcome!
-
-If you'd like to suggest changes, improve code, or add new features:
-
-1. Fork the repository
-2. Create a new branch (`feature/my-new-feature`)
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-For significant changes, please open an issue first to discuss what you'd like to change.
-
-Let's collaborate and grow together 🚀
----
-
-## 🗂️ Project Structure
-
-```plaintext
-FPM_Assignment_PY/
-│
-├── dashboard/
-│   └── app.py                          # ✅ Streamlit app
-│
-├── data/
-│   ├── raw/
-│   │   └── House Price Data.csv
-│   ├── processed/
-│   │   ├── hse_price_cleaned.csv
-│   │   ├── hse_price_optimized.csv
-│   │   ├── incoming_house_data.csv  # ✅ For dashboard input testing
-│   │   ├── X_train.csv
-│   │   ├── X_test.csv
-│   │   ├── y_train.csv
-│   │   └── y_test.csv    
-├── environment/
-│   ├── environment.yml
-│   └── requirements.txt
-│
-├── models/
-│   └── house_price_model.pkl
-│
-├── notebooks/
-│   ├── 01_EDA.ipynb
-│   ├── 02_Model_Building.ipynb
-│   └── 03_Evaluation_Report.ipynb
-│
-├── reports/
-│   ├── summary.txt
-│   └── 03_objective_evaluation_report.pdf
-│
-├── src/
-│   ├── data_prep.py
-│   ├── train_model.py
-│   └── utils.py
-│
-├── .gitignore
-├── main.py
-└── README.md
+## 📂 Repository Structure
 
 ```
+FPM_Assignment_PY/
+├── dashboards/                 # Streamlit app
+│   └── app.py
+├── data/
+│   ├── raw/
+│   └── processed/
+├── environment/               # Conda & pip environment files
+├── models/                    # Pickled regression model
+├── notebooks/                 # EDA, model building, evaluation
+├── reports/                   # Text and PDF summaries
+├── src/                       # Reusable Python scripts
+└── README.md
+```
+
 ---
-## 📜 License
 
-This project is licensed under the MIT License.  
-You are free to use, modify, and distribute it with attribution.
+## 📊 Model Summary
+
+- **Model Type:** Multiple Linear Regression
+- **R²:** 0.808 (after removing influential points)
+- **Adjusted R²:** 0.805
+- **Train RMSE:** 1.700
+- **Test RMSE:** 2.242
+
+**Significant Predictors:**  
+✅ `area`  
+✅ `distance`  
+❌ `schools` (became insignificant after removing influential points)
 
 ---
-## 👤 Author
 
-**William Chenecho Phiri**  
-📧 [chenechoz@gmail.com](mailto:chenechoz@gmail.com)  
-🌐 [GitHub Profile](https://github.com/kochezz) 
-🌐 [Linkedin Profile](https://www.linkedin.com/in/william-phiri-866b8443/) 
+## 🔍 Diagnostics Summary
 
+| Check                   | Result                         |
+|------------------------|--------------------------------|
+| Multicollinearity      | No (VIF < 5 for all variables) |
+| Influential Points     | 8 removed (Cook’s Distance)    |
+| Normality of Residuals | Slight deviation               |
+| Homoscedasticity       | ✅ Verified via residual plots  |
 
 ---
 
+## 🚀 Deployment
+
+- A **Streamlit dashboard** was developed for interactive predictions
+- Users can:
+  - Manually enter values via sliders
+  - Upload CSVs for batch prediction
+- Deployment ready for local and cloud hosting
+
+---
+
+## 📬 Contact
+
+Developed by **Business Enterprise Data Architecture (BEDA)**  
+📩 Email: [wphiri@beda.ie](mailto:wphiri@beda.ie)  
+🔗 LinkedIn: [William Phiri](https://www.linkedin.com/in/william-phiri-866b8443/)  
+🧭 Motto: _"Get it done the BEDA way"_
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
