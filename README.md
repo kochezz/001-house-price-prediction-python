@@ -39,7 +39,7 @@ FPM_Assignment_PY/
 
 ---
 
-## 📊 Model Summary
+## 📊 Final Model Summary
 
 - **Model Type:** Multiple Linear Regression
 - **R²:** 0.808 (after removing influential points)
@@ -80,7 +80,7 @@ FPM_Assignment_PY/
 Developed by **Business Enterprise Data Architecture (BEDA)**  
 📩 Email: [wphiri@beda.ie](mailto:wphiri@beda.ie)  
 🔗 LinkedIn: [William Phiri](https://www.linkedin.com/in/william-phiri-866b8443/)  
-🧭 Motto: _"Get it done the BEDA way"_
+🧭 _"Get it done the BEDA way"_
 
 ---
 
