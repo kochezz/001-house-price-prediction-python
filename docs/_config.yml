@@ -1,4 +1,11 @@
+title: "House Price Prediction (Python)"
+email: wphiri@beda.ie
+description: "Portfolio project using Multiple Linear Regression in Python."
+url: "https://kochezz.github.io"
+baseurl: "/001-house-price-prediction-python"
+theme: minimal-mistakes-jekyll
 
-theme: minima
-title: BEDA Portfolio
-description: A showcase of machine learning projects by William Phiri
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
