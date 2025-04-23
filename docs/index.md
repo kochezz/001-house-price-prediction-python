@@ -10,7 +10,7 @@
 ---
 
 ### 🔗 Navigation  
-[🏠 Home](./index.md) | [📈 R Project](https://github.com/kochezz/002-house-price-prediction-R) | [📊 Python Project](https://kochezz.github.io/001-house-price-prediction-python/) | [📧 Contact](mailto:wphiri@beda.ie)
+[🏠 Home](./index.md) | [📈 R Project](https://kochezz.github.io/002-house-price-prediction-R/) | [📊 Python Project](https://kochezz.github.io/001-house-price-prediction-python/) | [📧 Contact](mailto:wphiri@beda.ie)
 
 ---
 
