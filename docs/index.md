@@ -26,3 +26,4 @@ This project demonstrates how to build and evaluate a multiple linear regression
 - Matplotlib / Seaborn
 - Statsmodels
 - Streamlit
+- Numpy
