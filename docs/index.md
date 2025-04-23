@@ -1,7 +1,5 @@
 
 ---
-layout: default
-title: House Price Prediction (Python)
 ---
 
 <p align="center">
