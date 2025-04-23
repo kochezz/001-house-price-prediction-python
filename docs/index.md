@@ -4,6 +4,18 @@ layout: default
 title: House Price Prediction (Python)
 ---
 
+<p align="center">
+  <img src="./BEDA_logo3.png" alt="BEDA Logo" width="280"/>
+  <h2 align="center"><i>Get it done the BEDA way</i></h2>
+</p>
+
+---
+
+### 🔗 Navigation  
+[🏠 Home](./index.md) | [📈 R Project](https://github.com/kochezz/002-house-price-prediction-R) | [📊 Python Project](https://kochezz.github.io/001-house-price-prediction-python/) | [📧 Contact](mailto:wphiri@beda.ie)
+
+---
+
 # 🏡 House Price Prediction using Multiple Linear Regression (Python)
 
 [![Python](https://img.shields.io/badge/Built%20With-Python-blue?logo=python)](https://www.python.org/)
@@ -21,24 +33,19 @@ This project builds a **Multiple Linear Regression** model in **Python** to pred
 - Distance from the nearest metro station (in km)
 - Number of schools within 2 km
 
-The dataset contains **198 observations** and 5 variables.
-
 ---
 
 ## 📂 Repository Structure
 
 ```
 FPM_Assignment_PY/
-├── dashboards/                 # Streamlit app
-│   └── app.py
+├── dashboards/
 ├── data/
-│   ├── raw/
-│   └── processed/
-├── environment/               # Conda & pip environment files
-├── models/                    # Pickled regression model
-├── notebooks/                 # EDA, model building, evaluation
-├── reports/                   # Text and PDF summaries
-├── src/                       # Reusable Python scripts
+├── environment/
+├── models/
+├── notebooks/
+├── reports/
+├── src/
 └── README.md
 ```
 
@@ -47,15 +54,10 @@ FPM_Assignment_PY/
 ## 📊 Model Summary
 
 - **Model Type:** Multiple Linear Regression
-- **R²:** 0.808 (after removing influential points)
+- **R²:** 0.808
 - **Adjusted R²:** 0.805
 - **Train RMSE:** 1.700
 - **Test RMSE:** 2.242
-
-**Significant Predictors:**  
-✅ `area`  
-✅ `distance`  
-❌ `schools` (became insignificant after removing influential points)
 
 ---
 
@@ -72,23 +74,20 @@ FPM_Assignment_PY/
 
 ## 🚀 Deployment
 
-- A **Streamlit dashboard** was developed for interactive predictions
-- Users can:
-  - Manually enter values via sliders
-  - Upload CSVs for batch prediction
-- Deployment ready for local and cloud hosting
+- **Streamlit App** is live at:  
+  👉 [https://01-beda-house-price-prediction.streamlit.app/](https://01-beda-house-price-prediction.streamlit.app/)
+
+- Features:
+  - Manual input with sliders
+  - Bulk CSV upload
+  - Model trained on cleaned & validated dataset
 
 ---
 
 ## 📬 Contact
 
-Developed by **Business Enterprise Data Architecture (BEDA)**  
-📩 Email: [wphiri@beda.ie](mailto:wphiri@beda.ie)  
-🔗 LinkedIn: [William Phiri](https://www.linkedin.com/in/william-phiri-866b8443/)  
-🧭 Motto: _"Get it done the BEDA way"_
+Business Enterprise Data Architecture (BEDA)  
+📩 [wphiri@beda.ie](mailto:wphiri@beda.ie)  
+🔗 [LinkedIn – William Phiri](https://www.linkedin.com/in/william-phiri-866b8443/)
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
