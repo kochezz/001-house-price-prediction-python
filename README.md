@@ -18,6 +18,12 @@ This project builds a **Multiple Linear Regression** model in **Python** to pred
 
 The dataset contains **198 observations** and 5 variables.
 
+The Project aims to;
+- Predict house prices in millions of Rs
+- Input values via a clean Streamlit UI with the option to upload a csv file.
+- Model trained using `scikit-learn` Linear Regression
+- Built with reproducibility and scalability in mind
+  
 ---
 
 ## 📂 Repository Structure
